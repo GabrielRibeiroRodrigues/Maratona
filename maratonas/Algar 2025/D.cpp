@@ -20,16 +20,30 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 int main()
 { 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
+    int n, k;
+    cin >> n >> k;
+
+    if (k > n) {
+        cout << "0" << endl;  
     }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+    long long fatn = 1;
+
+
+    long long fatk = 1;
+    long long fatnk = 1;
+    for (int i = n; i > 1; i--) {
+        fatn *= i;
+    }
+
+    for (int i = k; i > 1; i--) {
+        fatk *= i;
+    }
+
+  
+    for (int i = (n - k); i > 1; i--) {
+        fatnk *= i;}   
+    long long resultado = fatn / (fatk * fatnk);
+
+ 
+    cout << resultado << endl;
 }

@@ -18,18 +18,23 @@ typedef pair<int, int> ii;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-int main()
-{ 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
+int main() {
+    int N;
+    cin >> N;
+    
+    set<int> anosUnicos; 
+    for (int i = 0; i < N; i++) {
+        int ano;
+        cin >> ano;
+        anosUnicos.insert(ano);
+
     }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+    
+   
+    int tamanho = anosUnicos.size();
+    
+    cout << tamanho << endl; 
+    
+    return 0;
 }
+

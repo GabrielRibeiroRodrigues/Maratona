@@ -20,16 +20,119 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 int main()
 { 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
-    }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+int a,b;cin >> a >> b;
+
+cout << a-b << endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

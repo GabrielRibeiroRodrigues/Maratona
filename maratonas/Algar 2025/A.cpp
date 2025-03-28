@@ -18,18 +18,19 @@ typedef pair<int, int> ii;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-int main()
-{ 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
+
+int main() {
+    string texto, palavra;
+    getline(cin, texto);
+
+    set<string> pal;
+    stringstream tamm(texto);
+
+    while (tamm >> palavra) { 
+        for (char &c : palavra) {
+        c = tolower(c); 
+        pal.insert(palavra);}
     }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+
+    cout << pal.size() << endl; 
 }

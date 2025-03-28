@@ -17,19 +17,25 @@ typedef pair<int, int> ii;
 
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
-
+ 
 int main()
 { 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
+    
+int n,jovem = 0 ,adulta = 0,velha = 0;
+cin >> n;
+r(i,n){
+    int a;cin >> a;
+    if(a == 1){
+        adulta++;
     }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+    else if(a == 2){
+        velha++;
+        jovem++;
+    }
+
+}
+cout << "Jovens: " << jovem << endl;
+cout << "Adultos: " << adulta << endl;
+cout << "Idosos: " << velha << endl;
+
 }

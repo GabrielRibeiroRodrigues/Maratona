@@ -20,16 +20,15 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 int main()
 { 
-    int rep = 1, repm = 0;
-    string a; cin >> a;
-    r(i, a.size() - 1) { 
-        if (a[i] == a[i + 1]) { 
-            rep++;
-        } else {
-            repm = max(repm, rep); 
-            rep = 1;
-        }
+int n, contador = 0;
+cin >> n;
+for(int i = 0; i < n; i++){
+    int aux;cin >> aux;
+    if(aux != 1){
+        contador++;
     }
-    repm = max(repm, rep); 
-    cout << repm << endl; 
+}
+cout << contador << endl;
+
+
 }
